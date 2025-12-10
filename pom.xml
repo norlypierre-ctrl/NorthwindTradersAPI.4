@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.pluralsight</groupId>
-	<artifactId>NorthwindTradersAPI.3</artifactId>
+	<artifactId>NorthwindTradersAPI.4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>NorthwindTradersAPI.3</name>
-	<description>API part 3</description>
+	<name>NorthwindTradersAPI.4</name>
+	<description>API part 4</description>
 	<url/>
 	<licenses>
 		<license/>

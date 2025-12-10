@@ -1,5 +1,6 @@
 package com.pluralsight.NorthwindTradersAPI4.controllers;
 
+import com.pluralsight.NorthwindTradersAPI4.dao.Interfaces.IProductDAO;
 import com.pluralsight.NorthwindTradersAPI4.models.Product;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,17 +20,22 @@ public class ProductControllers {
     }
 
     @RequestMapping(path = "/Product", method = RequestMethod.GET)
-    public List<Product> getProducts (){
+    public List<Product> getProducts() {
         return products;
     }
 
     @RequestMapping(path = "/Product", method = RequestMethod.GET)
     public Product getProducts(@PathVariable int productID) {
-        for (Product product : products){
-            if (product.getProductID() == productID){
+        for (Product product : products) {
+            if (product.getProductID() == productID) {
                 return product;
             }
         }
         return null;
+    }
+
+    @RequestMapping(path = "/Product", method = RequestMethod.GET)
+    public Product insertProduct(@RequestBody Product product) {
+        return IProductDAO.inset(product);
     }
 }

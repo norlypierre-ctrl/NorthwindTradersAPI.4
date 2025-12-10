@@ -40,6 +40,6 @@ public class ProductControllers {
 
     @RequestMapping(path = "/Product", method = RequestMethod.POST)
     public Product insertProduct(@RequestBody Product product) {
-        return productDAO.inset(product);
+        return productDAO.insert(product);
     }
 }

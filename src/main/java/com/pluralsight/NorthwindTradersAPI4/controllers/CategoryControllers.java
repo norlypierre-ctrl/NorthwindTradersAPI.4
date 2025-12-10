@@ -1,6 +1,6 @@
 package com.pluralsight.NorthwindTradersAPI4.controllers;
 
-import com.pluralsight.NorthwindTradersAPI4.dao.Interfaces.IProductDAO;
+import com.pluralsight.NorthwindTradersAPI4.dao.Interfaces.ICategoryDAO;
 import com.pluralsight.NorthwindTradersAPI4.models.Category;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,6 +37,6 @@ public class CategoryControllers {
 
     @RequestMapping(path = "/Category", method = RequestMethod.GET)
     public Category insertCategory(@RequestBody Category category) {
-        return IProductDAO.inset(category);
+        return ICategoryDAO.inset(category);
     }
 }
